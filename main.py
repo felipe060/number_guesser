@@ -1,18 +1,39 @@
 print('Código iniciado')
 print('')
-chosen_number = input('Digite o número teto do desafio: ')
+chosen_number = input('Digite o número teto do desafio, o número tem q ser inteiro: ')
 
 if chosen_number.isdigit():
     chosen_number = int(chosen_number)
     print('numérico')
 else:
-    print('O valor informado n é numérico. Execute o código novamente e digite um número')
+    print('O valor informado n é numérico ou n é inteiro. Execute o código novamente e digite um número inteiro')
     quit()
 
 from random import randint
 random_number = randint(0, chosen_number)
 
+counter = 0
+
 while True:
+    user_answer = input('Advinhe o número: ')
+
+    if user_answer.isdigit():
+        user_answer = int(user_answer)
+    else:
+        print('O valor informado n é numérico ou n é inteiro. Execute o código novamente e digite um número inteiro')
+        continue
+
+    counter += 1
+    if user_answer == random_number:
+        print('\nVc acertou o número')
+        break
+    elif user_answer > random_number:
+        print('o número é menor q esse')
+    else:
+        print('o número é maior q esse')
+
+print(f'vc acertou c {counter} tentativas')
+
 
 
 
