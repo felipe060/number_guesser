@@ -24,7 +24,7 @@ while True:
     if user_answer.isdigit():
         user_answer = int(user_answer)
     else:
-        print('O valor informado n é numérico ou n é inteiro. Execute o código novamente e digite um número inteiro')
+        print('O valor informado n é numérico ou n é inteiro')
         continue
 
     counter += 1
@@ -38,7 +38,3 @@ while True:
 
 print(f'vc acertou c {counter} tentativas')
 
-
-
-
-#da p transformar o if numa função
